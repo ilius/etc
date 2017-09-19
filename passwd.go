@@ -12,8 +12,8 @@ import (
 // An Entry contains all the fields for a specific user
 type Entry struct {
 	Pass  string
-	Uid   string
-	Gid   string
+	UID   string
+	GID   string
 	Gecos string
 	Home  string
 	Shell string
