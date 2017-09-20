@@ -1,3 +1,3 @@
-# passwd
+# etc
 
-Forked From https://github.com/willdonnelly/passwd
+tools for parsing configuration files in `/etc`
