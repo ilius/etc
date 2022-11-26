@@ -5,7 +5,8 @@ import (
 	"testing"
 )
 
-const examplegroup = `root:x:0:
+const examplegroup = `# test comment
+root:x:0:
 ryan:x:501:
 ryan2:x:502:
 sudo:x:555:ryan,ryan2`

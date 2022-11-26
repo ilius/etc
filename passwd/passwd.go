@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+const commentStart = byte('#')
+
 // An Entry contains all the fields for a specific user
 type Entry struct {
 	Pass  string
@@ -46,6 +48,12 @@ func ParseReader(r io.Reader) (map[string]Entry, error) {
 		line, _, err := lines.ReadLine()
 		if err != nil {
 			break
+		}
+		if len(line) == 0 {
+			continue
+		}
+		if line[0] == commentStart {
+			continue
 		}
 		name, entry, err := parseLine(string(copyBytes(line)))
 		if err != nil {
